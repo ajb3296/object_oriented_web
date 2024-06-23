@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import Main from './pages/Main';
+import CareerAdd from './pages/CareerAdd';
+import CareerShow from './pages/CareerShow';
+import BudgetAdd from './pages/BudgetAdd';
+import BudgetShow from './pages/BudgetShow';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+
+        <Route path="/career_add" element={<CareerAdd />} />
+        <Route path="/career_show" element={<CareerShow />} />
+
+        <Route path="/budget_add" element={<BudgetAdd />} />
+        <Route path="/budget_show" element={<BudgetShow />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
