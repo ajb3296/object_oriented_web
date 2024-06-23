@@ -121,6 +121,8 @@ export default function BudgetAdd() {
                     .then((response) => {
                         console.log("businessPlanFormData: ", response);
                     })
+
+                    alert('예산편성신청이 완료되었습니다.');
                 })
             }}>예산편성신청</button>
         </div>
